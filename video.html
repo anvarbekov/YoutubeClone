@@ -3,217 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video page - Youtube Clone - |HTML CSS JS|</title>
-    <!-- ----------------- css file link ----------------- -->
+     <!-- ----------------- favicon ----------------- -->
+     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1754/1754435.png" type="image/x-icon">
+    <!-- -------------- fontawesome icons -------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- -------------- box icons -------------- -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ---------------- css file link ---------------- -->
     <link rel="stylesheet" href="./css/style.css">
+    <title>Cource</title>
 </head>
 <body>
     <nav class="flex-div">
         <div class="nav-left flex-div">
-            <img class="menu-icon" src="images/menu.png" alt="this is menu">
-            <img class="logo" src="images/logo.png" alt="this is logo">
-        </div>
-        <div class="nav-middle flex-div">
-            <div class="search-box flex-div">
-                <input type="text" placeholder="Search">
-                <img src="images/search.png" alt="this is search logo">
-            </div>
-            <img class="mic-icon" src="images/voice-search.png" alt="this is mic icon">
+            <i style="display: none;" class="fa-sharp fa-solid fa-bars-staggered bars hidden"></i>
+            <a class="flex-div" href="index.html">
+            <img class="menu-icon" src="./images/myPhoto.png">
+            <h1 class="logo">Cources</h1>
+           </a>
         </div>
         <div class="nav-right flex-div">
-            <img src="images/upload.png" alt="this is upload">
-            <img src="images/more.png" alt="this is more">
-            <img src="images/notification.png" alt="this is notification">
-            <img class="user-icon" src="images/myPhoto.png" alt="this is user">
+            <i class='bx bx-sun sun'></i>
+            <i style="color: #292B34;" class='bx bx-moon icon__hidden moon'></i>
+            <i class='bx bx-message-dots message__icon'></i>
+            <img src="./images/myPhoto.png" class="user-icon">
         </div>
     </nav>
 
+    <!-- video container -->
     <div class="container play-container">
         <div class="row">
             <div class="play-video">
-                <video controls autoplay>
+                <video controls>
                     <source src="images/video.mp4" type="video/mp4">
                 </video>
-                <div class="tags">
-                    <a href="#">#Coding</a>
-                    <a href="#">#HTML</a>
-                    <a href="#">#CSS</a>
-                    <a href="#">#JavaScript</a>
-                </div>
-                <h3>Lorem ipsum dolor, sit amet consectetur adipisicing.</h3>
-                <div class="play-video-info">
-                    <p>1225 Views &bull; 2 days ago</p>
-                    <div>
-                        <a href="#"><img src="images/like.png">125</a>
-                        <a href="#"><img src="images/dislike.png">2</a>
-                        <a href="#"><img src="images/share.png">Share</a>
-                        <a href="#"><img src="images/save.png">Save</a>
-                    </div>
-                </div>
+                <h3>#00. Lesson title</h3>
                 <hr>
-                <div class="publisher">
-                    <img src="images/myPhoto.png">
-                    <div>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <span>500k Subscribers</span>
-                    </div>
-                    <button type="button">Subscribe</button>
-                </div>
-                <div class="vid-description">
-                    <p>Channel Muhammadnozim Anvarbekov</p>
-                    <p>Subscribe Muhammadnozim Anvarbekov to watch more tutorials on  web development</p>
-                    <hr>
-                    <h4>157 Comments</h4>
-
-                    <div class="add-comment">
-                        <img src="images/myPhoto.png">
-                        <input type="text" placeholder="Write comments...">
-                    </div>
-                    
-                    <div class="old-comment">
-                        <img src="images/myPhoto.png">
-                        <div>
-                            <h3>User Name <span>2 days ago</span></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore autem veniam labore, officiis debitis veritatis.</p>
-                            <div class="acomment-action">
-                                <img src="images/like.png">
-                                <span>255</span>
-                                <img src="images/dislike.png">
-                                <span>2</span>
-                                <span>REPLY</span>
-                                <a href="#">All resplies</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="old-comment">
-                        <img src="images/myPhoto.png">
-                        <div>
-                            <h3>User Name <span>2 days ago</span></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore autem veniam labore, officiis debitis veritatis.</p>
-                            <div class="acomment-action">
-                                <img src="images/like.png">
-                                <span>255</span>
-                                <img src="images/dislike.png">
-                                <span>2</span>
-                                <span>REPLY</span>
-                                <a href="#">All resplies</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="old-comment">
-                        <img src="images/myPhoto.png">
-                        <div>
-                            <h3>User Name <span>2 days ago</span></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore autem veniam labore, officiis debitis veritatis.</p>
-                            <div class="acomment-action">
-                                <img src="images/like.png">
-                                <span>255</span>
-                                <img src="images/dislike.png">
-                                <span>2</span>
-                                <span>REPLY</span>
-                                <a href="#">All resplies</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="old-comment">
-                        <img src="images/myPhoto.png">
-                        <div>
-                            <h3>User Name <span>2 days ago</span></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore autem veniam labore, officiis debitis veritatis.</p>
-                            <div class="acomment-action">
-                                <img src="images/like.png">
-                                <span>255</span>
-                                <img src="images/dislike.png">
-                                <span>2</span>
-                                <span>REPLY</span>
-                                <a href="#">All resplies</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
             </div>
+
+            <!-- right sidebar -->
             <div class="right-sidebar">
+                <div class="course__vid-info">
+                    <ul class="accordion__vids">
+                            <h1>Kurs bo'limlari</h1>
+                            <p>6ta Bo'lim <i class="fa-solid fa-circle"></i> 37ta Darslik</p>
+                         <li class="accordio__vid">
+                            <label class="accordion__v" for="vid__one"><span><i class='bx bxs-chevron-down down__icon'></i> 1-Modul. HTML darslari</span> <span>5ta dars</span></label>
+                            <input class="accordion__input" checked id="vid__one" type="radio" name="accordion">
+                            <div class="accordion__content">
 
-                <div class="side-video-list">
-                    <a class="small-thumbnail" href="#"><img src="images/thumbnail1.png"></a>
-                    <div class="vid-info">
-                        <a href="#">Best channel that help to be a web developer</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views</p>
-                    </div>
+                                <a href="#" class="accordion__content-item">
+                                    <div class="accordion__content-item-left">
+                                        <input type="checkbox">
+                                        <p class="accordion__content-title active">
+                                            #1. Web dasurlash haqida
+                                        </p>
+                                    </div>
+                                    <div class="accordion__content-item-right">
+                                        <div class="accordion__content-item-time active">15:43</div>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="accordion__content-item">
+                                    <div class="accordion__content-item-left flex-div">
+                                        <input type="checkbox">
+                                        <p class="accordion__content-title">
+                                            #1. Web dasurlash haqida
+                                        </p>
+                                    </div>
+                                    <div class="accordion__content-item-right">
+                                        <div class="accordion__content-item-time">15:43</div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </li>
+
+                         <li class="accordio__vid">
+                            <label class="accordion__v" for="vid__two"><span><i class='bx bxs-chevron-down'></i> 1-Modul. HTML darslari</span> <span>5ta dars</span></label>
+                            <input class="accordion__input" id="vid__two" type="radio" name="accordion">
+                            <div class="accordion__content">
+
+                                <a href="#" class="accordion__content-item">
+                                    <div class="accordion__content-item-left flex-div">
+                                        <input type="checkbox">
+                                        <p class="accordion__content-title">
+                                            #1. Web dasurlash haqida
+                                        </p>
+                                    </div>
+                                    <div class="accordion__content-item-right">
+                                        <div class="accordion__content-item-time">15:43</div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </li>
+
+                         <li class="accordio__vid">
+                            <label class="accordion__v" for="vid__three"><span><i class='bx bxs-chevron-down'></i> 1-Modul. HTML darslari</span> <span>5ta dars</span></label>
+                            <input class="accordion__input" id="vid__three" type="radio" name="accordion">
+                            <div class="accordion__content">
+
+                                <a href="#" class="accordion__content-item">
+                                    <div class="accordion__content-item-left flex-div">
+                                        <input type="checkbox">
+                                        <p class="accordion__content-title">
+                                            #1. Web dasurlash haqida
+                                        </p>
+                                    </div>
+                                    <div class="accordion__content-item-right">
+                                        <div class="accordion__content-item-time">15:43</div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </li>
+
+                    </ul>
                 </div>
-
-                <div class="side-video-list">
-                    <a class="small-thumbnail" href="#"><img src="images/thumbnail2.png"></a>
-                    <div class="vid-info">
-                        <a href="#">Best channel that help to be a web developer</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views</p>
-                    </div>
-                </div>
-
-                <div class="side-video-list">
-                    <a class="small-thumbnail" href="#"><img src="images/thumbnail3.png"></a>
-                    <div class="vid-info">
-                        <a href="#">Best channel that help to be a web developer</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views</p>
-                    </div>
-                </div>
-
-                <div class="side-video-list">
-                    <a class="small-thumbnail" href="#"><img src="images/thumbnail4.png"></a>
-                    <div class="vid-info">
-                        <a href="#">Best channel that help to be a web developer</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views</p>
-                    </div>
-                </div>
-
-                <div class="side-video-list">
-                    <a class="small-thumbnail" href="#"><img src="images/thumbnail5.png"></a>
-                    <div class="vid-info">
-                        <a href="#">Best channel that help to be a web developer</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views</p>
-                    </div>
-                </div>
-
-                <div class="side-video-list">
-                    <a class="small-thumbnail" href="#"><img src="images/thumbnail6.png"></a>
-                    <div class="vid-info">
-                        <a href="#">Best channel that help to be a web developer</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views</p>
-                    </div>
-                </div>
-
-                <div class="side-video-list">
-                    <a class="small-thumbnail" href="#"><img src="images/thumbnail7.png"></a>
-                    <div class="vid-info">
-                        <a href="#">Best channel that help to be a web developer</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views</p>
-                    </div>
-                </div>
-
-                <div class="side-video-list">
-                    <a class="small-thumbnail" href="#"><img src="images/thumbnail8.png"></a>
-                    <div class="vid-info">
-                        <a href="#">Best channel that help to be a web developer</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views</p>
-                    </div>
-                </div>
-
             </div>
+            <!-- right sidebar -->
+
         </div>
     </div>
 
-
+    <!-- --------------- script file link --------------- -->
+    <script src="js/script.js"></script>
 </body>
 </html>

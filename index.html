@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- ----------------- favicon ----------------- -->
+     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1754/1754435.png" type="image/x-icon">
+    <!-- -------------- fontawesome icons -------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- -------------- box icons -------------- -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- ---------------- css file link ---------------- -->
     <link rel="stylesheet" href="./css/style.css">
-    <title>Youtube Clone - |HTML CSS JS|</title>
+    <title>Cources</title>
 </head>
 <body>
     <nav class="flex-div">
         <div class="nav-left flex-div">
-            <img class="menu-icon" src="./images/menu.png">
-            <img class="logo" src="./images/logo.png">
-        </div>
-        <div class="nav-middle flex-div">
-            <div class="search-box flex-div">
-                <input type="text" placeholder="Search">
-                <img src="./images/search.png">
-            </div>
-            <img src="./images/voice-search.png" class="mic-icon">
+            <i class="fa-sharp fa-solid fa-bars-staggered bars hidden"></i>
+            <a class="flex-div" href="#">
+            <img class="menu-icon" src="./images/myPhoto.png">
+            <h1 class="logo">Cources</h1>
+           </a>
         </div>
         <div class="nav-right flex-div">
-            <img src="./images/upload.png">
-            <img src="./images/more.png">
-            <img src="./images/notification.png">
+            <i class='bx bx-sun sun'></i>
+            <i style="color: #292B34;" class='bx bx-moon icon__hidden moon'></i>
+            <i class='bx bx-message-dots message__icon'></i>
             <img src="./images/myPhoto.png" class="user-icon">
         </div>
     </nav>
@@ -31,129 +33,132 @@
     <!-- sidebar -->
     <div class="sidebar">
         <div class="shortcut-links">
-            <a href="#"><img src="images/home.png"><p>Home</p></a>
-            <a href="#"><img src="images/explore.png"><p>Explore</p></a>
-            <a href="#"><img src="images/subscriprion.png"><p>Subscriprion</p></a>
-            <a href="#"><img src="images/library.png"><p>Library</p></a>
-            <a href="#"><img src="images/history.png"><p>History</p></a>
-            <a href="#"><img src="images/playlist.png"><p>Playlist</p></a>
-            <a href="#"><img src="images/messages.png"><p>Messages</p></a>
-            <a href="#"><img src="images/show-more.png"><p>Show More</p></a>
-            <hr>
-        </div>
-        <div class="subscribed-list">
-            <h3>SUBSCRIBED</h3>
-            <a href="#"><img src="images/myPhoto.png"><p>User Name</p></a>
-            <a href="#"><img src="images/myPhoto.png"><p>User Name</p></a>
-            <a href="#"><img src="images/myPhoto.png"><p>User Name</p></a>
+            <div class="sidebar__link active"><a href="index.html"><i class='bx bx-tachometer'></i><p>Bosh Sahifa</p></a></div>
+            <div class="sidebar__link"><a href="cources.html"><i class='bx bx-book-open'></i><p>Kurslar</p></a></div>
+            <div class="sidebar__link"><a href="#"><i class='bx bx-folder-minus'></i><p>Kod Manbalar</p></a></div>
+            <div class="sidebar__link"><a href="contact.html"><i class="fa-regular fa-address-book"></i><p>Kontakt</p></a></div>
+            <div class="sidebar__link"><a href="#"><i class="fa-regular fa-circle-question"></i><p>FAQ</p></a></div>
+            <div class="sidebar__link"><a href="#"><i class="fa-solid fa-signal"></i><p>Bootcamp</p></a></div>
         </div>
     </div>
 
     <!-- main -->
 
     <div class="container">
-        <div class="list-container">
+            <div class="content">
+                <div class="content__box">
+                    <h1 class="content__title">MERN Stack <span>Bootcamp</span></h1>
+                    <p class="parag__info">
+                        Haqiqiy startup loyihalarda ishtrok etib o'zingiz to'liq biznes startup dasturingizni murakkab texnologiyalar yordamida yasashni istaysizmi?
+                    </p>
+                    <p class="parag__info">
+                        <span>Admin jamoasi</span> sizga ajoyib taklif beradi. MERN Stack bootcamp kursimizda siz aynan haqiqiy biznes startup dasturingizni yozishingiz mumkin.
+                    </p>
+                    <p class="parag__info">
+                        Startup loyihada qanday texnologiyalar va mavzularni ushbu havolaga o'tib ko'rishingiz mumkin bo'ladi.
+                        <br>
+                        <a href="#">MERN Mavzular</a>
+                    </p>
+                    <div class="content__close-icon">
+                        <i onclick="removeContent()" class='bx bx-x-circle'></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- two content -->
+            <div class="content">
+                <div class="content__box">
+                    <h1 class="content__title">MERN Stack <span>Bootcamp</span></h1>
+                    <p class="parag__info">
+                        Haqiqiy startup loyihalarda ishtrok etib o'zingiz to'liq biznes startup dasturingizni murakkab texnologiyalar yordamida yasashni istaysizmi?
+                    </p>
+                    <p class="parag__info">
+                        <span>Admin jamoasi</span> sizga ajoyib taklif beradi. MERN Stack bootcamp kursimizda siz aynan haqiqiy biznes startup dasturingizni yozishingiz mumkin.
+                    </p>
+                    <p class="parag__info">
+                        Startup loyihada qanday texnologiyalar va mavzularni ushbu havolaga o'tib ko'rishingiz mumkin bo'ladi.
+                        <br>
+                        <a href="#">MERN Mavzular</a>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <h1 class="content__title"><span>Yangi</span> Kurslar</h1>
+
+            <div class="list-container">
+                
+                <div class="card__content ">
+                    <div class="card__img-box">
+                        <a href="cource.html"><img class="card__img" src="images/foundation.webp"></a>
+                        <div class="new">New</div>
+                    </div>
+                    <h3 class="card__title">Foundation kurslari</h3>
+                    <hr>
+                    <div class="card__footer">
+                        <div class="card__footer-left"><a href="cource.html">Batafsil</a></div>
+                        <div class="card__footer-right">
+                            <del>250.000</del>
+                            <span>Bepul</span>
+                        </div>
+                    </div>
+                </div>
             
-            <div class="vid-list">
-                <a href="video.html"><img src="images/thumbnail1.png" class="thumbnail"></a>
-                <div class="flex-div">
-                    <img src="images/myPhoto.png">
-                    <div class="vid-info">
-                        <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing.</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views &bull; 2 days</p>
+                <div class="card__content ">
+                    <div class="card__img-box">
+                        <a href="cource.html"><img class="card__img" src="images/foundation.webp"></a>
+                        <div class="new">New</div>
+                    </div>
+                    <h3 class="card__title">Foundation kurslari</h3>
+                    <hr>
+                    <div class="card__footer">
+                        <div class="card__footer-left"><a href="cource.html">Batafsil</a></div>
+                        <div class="card__footer-right">
+                            <del>250.000</del>
+                            <span>Bepul</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="vid-list">
-                <a href="video.html"><img src="images/thumbnail2.png" class="thumbnail"></a>
-                <div class="flex-div">
-                    <img src="images/myPhoto.png">
-                    <div class="vid-info">
-                        <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing.</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views &bull; 2 days</p>
+            
+                <div class="card__content ">
+                    <div class="card__img-box">
+                        <a href="cource.html"><img class="card__img" src="images/foundation.webp"></a>
+                        <div class="new">New</div>
+                    </div>
+                    <h3 class="card__title">Foundation kurslari</h3>
+                    <hr>
+                    <div class="card__footer">
+                        <div class="card__footer-left"><a href="cource.html">Batafsil</a></div>
+                        <div class="card__footer-right">
+                            <del>250.000</del>
+                            <span>Bepul</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="vid-list">
-                <a href="video.html"><img src="images/thumbnail3.png" class="thumbnail"></a>
-                <div class="flex-div">
-                    <img src="images/myPhoto.png">
-                    <div class="vid-info">
-                        <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing.</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views &bull; 2 days</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="vid-list">
-                <a href="video.html"><img src="images/thumbnail4.png" class="thumbnail"></a>
-                <div class="flex-div">
-                    <img src="images/myPhoto.png">
-                    <div class="vid-info">
-                        <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing.</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views &bull; 2 days</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="vid-list">
-                <a href="video.html"><img src="images/thumbnail5.png" class="thumbnail"></a>
-                <div class="flex-div">
-                    <img src="images/myPhoto.png">
-                    <div class="vid-info">
-                        <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing.</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views &bull; 2 days</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="vid-list">
-                <a href="video.html"><img src="images/thumbnail6.png" class="thumbnail"></a>
-                <div class="flex-div">
-                    <img src="images/myPhoto.png">
-                    <div class="vid-info">
-                        <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing.</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views &bull; 2 days</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="vid-list">
-                <a href="video.html"><img src="images/thumbnail7.png" class="thumbnail"></a>
-                <div class="flex-div">
-                    <img src="images/myPhoto.png">
-                    <div class="vid-info">
-                        <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing.</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views &bull; 2 days</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="vid-list">
-                <a href="video.html"><img src="images/thumbnail8.png" class="thumbnail"></a>
-                <div class="flex-div">
-                    <img src="images/myPhoto.png">
-                    <div class="vid-info">
-                        <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing.</a>
-                        <p>Muhammadnozim Anvarbekov</p>
-                        <p>15k Views &bull; 2 days</p>
-                    </div>
-                </div>
-            </div>
-
+               
         </div>
+
+                <!-- Footer all page -->
+                <footer class="page__footer">
+                    <div class="page__footer-left">
+                        <span>© 2023 Cources. Barcha huquqlar himoyalangan</span>
+                    </div>
+                    <div class="page__footer-right">
+                        <div class="social__links">
+                            <a class="social__link" href="#"><i class='bx bxl-telegram'></i></a>
+                            <a class="social__link" href="#"><i class='bx bxl-youtube'></i></a>
+                            <a class="social__link" href="#"><i class='bx bxl-instagram'></i></a>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Footer all page -->
+
     </div>
 
+
     <!-- --------------- script file link --------------- -->
+    <script src="js/request.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
