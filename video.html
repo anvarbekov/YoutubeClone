@@ -34,10 +34,11 @@
     <div class="container play-container">
         <div class="row">
             <div class="play-video">
-                <video controls>
+                <!-- <video controls>
                     <source src="images/video.mp4" type="video/mp4">
-                </video>
-                <h3>#00. Lesson title</h3>
+                </video> -->
+                <iframe id="iframe" src="https://www.youtube.com/embed/xp7YROtJ2HE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3 id="lesson__title">#00. Lesson title</h3>
                 <hr>
             </div>
 
@@ -127,6 +128,7 @@
         </div>
     </div>
 
+    <script src="js/request.js"></script>
     <!-- --------------- script file link --------------- -->
     <script src="js/script.js"></script>
 </body>

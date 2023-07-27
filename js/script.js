@@ -39,23 +39,6 @@ moon.addEventListener('click', () => {
 })
 
 
-
-
-
-
-
-
-
-
-
-
-// request ready function
-
-const userIcon = document.querySelector('.user-icon')
-
-const updateUI = (data) => {
-    const loopData = data.data;
-
-    const oneData = loopData[0];
-    userIcon.src = oneData.avatar
+function dataUIS(dataUI){
+    document.getElementById('list-container').innerHTML = dataUI;
 }
