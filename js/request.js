@@ -52,11 +52,103 @@ document.addEventListener("DOMContentLoaded", async () => {
     JSONDatas.map((JSONData) => {
       document.getElementById("iframe").src = JSONData.videoPath;
       document.getElementById("lesson__title").textContent =
-        JSONData.id < 10
-          ? "#0" + JSONData.id + " " + JSONData.name
-          : "#" + JSONData.id + " " + JSONData.name;
+      (JSONData.name).slice(0, 2) < '10'
+          ? "#0" + JSONData.name
+          : "#" + JSONData.name;
     });
   }
+});
+
+// Moduls page request
+document.addEventListener("DOMContentLoaded", async () => {
+  const JSONDatas = await getPosts("http://gettalim.uz/api/CourseModuls?page=1");
+  if (JSONDatas) {
+    JSONDatas.map((JSONData) => {
+      const moduls = `
+
+      <ul class="accordion__vids">
+      <h1>Kurs bo'limlari</h1>
+      <p>6ta Bo'lim <i class="fa-solid fa-circle"></i> 37ta Darslik</p>
+   <li class="accordio__vid">
+      <label class="accordion__v" for="vid__one"><span><i class='bx bxs-chevron-down down__icon'></i> 1-Modul. HTML darslari</span> <span>5ta dars</span></label>
+      <input class="accordion__input" checked id="vid__one" type="radio" name="accordion">
+      <div class="accordion__content">
+
+          <a href="#" class="accordion__content-item">
+              <div class="accordion__content-item-left">
+                  <input type="checkbox">
+                  <p class="accordion__content-title active">
+                      ${JSONData.name}
+                  </p>
+              </div>
+              <div class="accordion__content-item-right">
+                  <div class="accordion__content-item-time active">15:43</div>
+              </div>
+          </a>
+
+          <a href="#" class="accordion__content-item">
+              <div class="accordion__content-item-left flex-div">
+                  <input type="checkbox">
+                  <p class="accordion__content-title">
+                      #1. Web dasurlash haqida
+                  </p>
+              </div>
+              <div class="accordion__content-item-right">
+                  <div class="accordion__content-item-time">15:43</div>
+              </div>
+          </a>
+
+      </div>
+  </li>
+
+   <li class="accordio__vid">
+      <label class="accordion__v" for="vid__two"><span><i class='bx bxs-chevron-down'></i> 1-Modul. HTML darslari</span> <span>5ta dars</span></label>
+      <input class="accordion__input" id="vid__two" type="radio" name="accordion">
+      <div class="accordion__content">
+
+          <a href="#" class="accordion__content-item">
+              <div class="accordion__content-item-left flex-div">
+                  <input type="checkbox">
+                  <p class="accordion__content-title">
+                      #1. Web dasurlash haqida
+                  </p>
+              </div>
+              <div class="accordion__content-item-right">
+                  <div class="accordion__content-item-time">15:43</div>
+              </div>
+          </a>
+
+      </div>
+  </li>
+
+   <li class="accordio__vid">
+      <label class="accordion__v" for="vid__three"><span><i class='bx bxs-chevron-down'></i> 1-Modul. HTML darslari</span> <span>5ta dars</span></label>
+      <input class="accordion__input" id="vid__three" type="radio" name="accordion">
+      <div class="accordion__content">
+
+          <a href="#" class="accordion__content-item">
+              <div class="accordion__content-item-left flex-div">
+                  <input type="checkbox">
+                  <p class="accordion__content-title">
+                      #1. Web dasurlash haqida
+                  </p>
+              </div>
+              <div class="accordion__content-item-right">
+                  <div class="accordion__content-item-time">15:43</div>
+              </div>
+          </a>
+
+      </div>
+  </li>
+
+</ul>
+      
+      `
+      document.getElementById('course__modul').innerHTML = moduls
+    });
+  }
+
+  
 });
 
 // Mentor page request
@@ -64,7 +156,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const JSONDatasArr = await getPosts("http://gettalim.uz/api/mentors?page=1");
   const JSONData = JSONDatasArr[0]
   if (JSONData) {
-    console.log(JSONData);
     const mentor = `
     <h1>Mentor</h1>
     <div class="mentors">
