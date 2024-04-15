@@ -5,6 +5,9 @@ const moon = document.querySelector('.moon');
 const root = document.querySelector(':root');
 const contentCloseIcon = document.querySelector('.content__close-icon');
 
+// audio
+// const audio = document.getElementById('audio');
+
 // content remove event function
 function removeContent(){
     contentCloseIcon.addEventListener('click', () => {
@@ -21,6 +24,8 @@ const toggleBtn = () => {
     sun.classList.toggle('icon__hidden')
     moon.classList.toggle('icon__hidden')
     root.classList.toggle('active')
+    const audio = new Audio('../audios/audioPlayEffect.mp3')
+    audio.play()
 }
 // mode save loacl stroge
 const getToggle = localStorage.getItem('mode');
